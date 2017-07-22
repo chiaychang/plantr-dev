@@ -4,15 +4,15 @@
 module.exports = {
 
     'facebookAuth' : {
-        'clientID'        : '1411025008986071', // your App ID
-        'clientSecret'    : '1f4ca627e86b95bd7af96bb38e12a350', // your App Secret
+        'clientID'        : '157758501458012', // your App ID
+        'clientSecret'    : '078b7de600bae65567b2c4d76d8e26f6', // your App Secret
         'callbackURL'     : 'https://plantr-dev3.herokuapp.com/auth/facebook/callback',
         'profileFields'   : ['emails']
     },
 
     'twitterAuth' : {
-        'consumerKey'        : 'q7oiDtFuovUW7bYuONB5erj8H',
-        'consumerSecret'     : 'pKlOFwc1E8737tV4aifSAN9O1UFnOxgaswZdFNDDK2rAu3LnBq',
+        'consumerKey'        : 'KhUqwyeruE6CrysjjtM8gE1RI',
+        'consumerSecret'     : '83Mr1jZ8RAymQqXeiJrn6sJxIAy1tV2blKwGiZ9ua139UePro6',
         'callbackURL'        : 'https://plantr-dev3.herokuapp.com/auth/twitter/callback'
     },
 
