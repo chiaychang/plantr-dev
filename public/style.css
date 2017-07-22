@@ -1,0 +1,317 @@
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #e8fff2;
+  color: #18bc9c;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container-fluid {
+  padding: 0 10px;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col-xs-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#wrap {
+  flex: 1;
+  height: 90vh;
+}
+
+footer {
+  /*flex-shrink: 0;  Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  height: 5vh;
+  margin-top: 5vh;
+}
+.show-hide {
+  display: none;
+}
+
+.fa-github-alt {
+  display: inline-block;
+}
+
+h1 {
+  font-family: 'Yellowtail', cursive;
+  font-size: 44px;
+
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+span > i {
+  padding-right: 5px;
+}
+
+.panel {
+  margin-bottom: 0px;
+  box-shadow: none;
+  border: none;
+  border-radius: 2px;
+}
+
+.fa {
+  padding: 10px;
+}
+
+/*Icon Hover Effects*/
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+/*Add Plant Form*/
+.weekdays-selector input {
+  display: none!important;
+}
+
+.weekdays-selector > [type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 40px;
+  width: 30px;
+  margin-right: 3px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.weekdays-selector >[type=checkbox]:checked + label {
+  background: #18bc9c;
+  color: #ffffff;
+}
+
+.btn-success {
+  margin: 0 auto;
+  display: block;
+  width: 20%;
+}
+
+/*Reminders*/
+.reminder-img {
+  position: relative;
+  width: 35px;
+  max-height: 35px;
+  top: 2px;
+  left: 2px;
+}
+
+.calendar-panel {
+  height: 75px;
+  overflow: hidden;
+  border: 1px solid rgba(24, 188, 156, 0.19);
+  margin-top: 10px;
+  padding: 2px;
+}
+
+.calendar {
+  position: relative;
+  display: inline-block;
+  width: 13.6%;
+  margin-right: 5px;
+}
+
+#calendar-wrap {
+  margin: 0 auto;
+}
+
+.calendar-day {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 10px;
+  background-color: #18bc9c;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.calendar-body {
+  padding: 0;
+}
+
+.calendar-body {
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.reminder-date {
+  padding: 2px;
+}
+
+.reminder-type {
+  float: left;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*Plants Page*/
+.panel-collapse {
+  height: 0px;
+  font-size: 12px;
+}
+
+.plant-panel, .panel-group {
+  margin-bottom: 0px;
+}
+.plant-panel {
+  position: relative;
+  float: left;
+  margin: 10px;
+  width: 30%;
+  height: auto;
+  overflow: hidden;
+}
+
+.plant-panel-body {
+  padding: 0;
+  overflow: hidden;
+}
+
+.plantpg-name, .fa-minus-square {
+  position: absolute;
+  z-index: 100;
+  top: 5px;
+}
+
+.plantpg-name {
+  left: 5px;
+  color: white;
+}
+.fa-minus-square {
+  cursor: pointer;
+  right: 5px;
+  color: #ff3f3f;
+}
+
+.plantpg-img {
+  position: relative;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.panel-default>.panel-heading {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+}
+
+.fa-chevron-circle-down {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+#profile-img {
+  width: 100%;
+}
+/*FORMS*/
+.form-control, input {
+  border-width: 0px;
+  border: 1px solid rgba(24, 188, 156, 0.41)
+}
+
+.form-control:focus {
+  border: 1px solid #18bc9c;
+}
+
+.btn-default {
+  background-color: #18bc9c;
+  border-color: #18bc9c;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+@media screen and (max-width:767px) {
+  
+  div#nav-column {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+  }
+
+  .hvr-bounce-in {
+    width: 10%;
+    float: left;
+    padding: 0;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .calendar {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .calendar-panel {
+    height: 50px;
+    margin-top: 0;
+    border: 1px solid rgba(24, 188, 156, 0.19);
+    border-bottom: none;
+  }
+
+  .reminder-type {
+    float: none;
+    position: relative;
+    text-align: center;
+    bottom: 20px;
+    font-size: 16px;
+  }
+
+  .calendar-day {
+    margin-top: 15px;
+  }
+
+  .fa-github-alt {
+    float: none;
+  }
+}

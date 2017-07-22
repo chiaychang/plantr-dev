@@ -1,0 +1,94 @@
+// Include React as a dependency
+var React = require("react");
+var Link = require("react-router").Link;
+import { browserHistory } from 'react-router';
+
+// Include the Helper (for the saved recall)
+var helpers = require("../utils/helpers");
+
+// Create the Main component
+class Plants extends React.Component {
+
+	constructor(props) {
+		super(props);
+	    this.state = {
+	    	savedPlants: []
+	    };
+	}
+
+    // When this component mounts, get all user plants
+	componentDidMount() {
+    	helpers.getUserPlants().then(function(data) {
+    		console.log(data);
+
+     		this.setState({ savedPlants: data });
+
+    	}.bind(this));
+  	}
+
+  	renderEmpty() {
+    	return (
+	      	<li className="list-group-item">
+	        	<h3>
+	          		<span>
+	            		<em>You have no plants.</em>
+	          		</span>
+	        	</h3>
+	      	</li>
+    	);
+  	}
+
+  	handleClick(id){
+  		browserHistory.push('/app/PlantProfile/' + id);
+  	}
+
+	renderSavedPlants() {
+    	return this.state.savedPlants.map(function(plant, index) {
+    		// console.log(plant);
+    		// console.log(index);
+
+			return (
+	        	<div key={index}>
+	        		<div onClick={this.handleClick.bind(null,plant.id)} id={plant.id} type="submit">
+		          		<div className="panel panel-default plant-panel">
+							<div className="panel-body plant-panel-body">
+							 	<h5 className="plantpg-name">{plant.name}</h5>
+								<img src={plant.imageURL} className="plantpg-img"></img>
+							    <i className="fa fa-minus-square fa-lg" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+	        	</div>
+	      	);
+    	}.bind(this));
+	}
+
+
+	renderContainer() {
+
+		return (
+	    	<div className="container-fluid">
+		        <div className="row">
+		          	<div className="col-xs-12 text-center">
+		          		<h2>My Plants</h2>
+		          	</div>
+		        </div>
+		        <div className="col-xs-12">
+		      		{this.renderSavedPlants()}
+		      	</div>      
+			</div>
+		);
+	}
+
+	render() {
+
+    	if (this.state.savedPlants.length===0) {
+    		return this.renderEmpty();
+    	}
+
+   		return this.renderContainer();
+ 	}
+};
+
+// Export the module back to the route
+module.exports = Plants;
