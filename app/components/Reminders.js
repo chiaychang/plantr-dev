@@ -46,8 +46,7 @@ class Reminders extends React.Component {
           savedPlants: plantData
           });
         if (plantData.length===0){
-          this.setState({modalIsOpen:true})
-        }
+          this.setState({modalIsOpen:true}); }
         reminderHelpers.getCalendar(reminderData);
       }.bind(this)); 
     }.bind(this));   
