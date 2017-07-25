@@ -6,7 +6,8 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 	
 	<title>Plantr</title>
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css"></link>
+    
 	<link rel="stylesheet" href="./fakeloader.css">
 
 	<!-- Bootstrap CSS -->
@@ -26,39 +27,37 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="./fakeloader.min.js"></script>
+	<script src="components/AddPlant.js"></script>
 
-	
 
 </head>
 
 <body>
 	<div id="fakeLoader"></div>
 	<!-- This is where React will deploy the contents it generates -->
+	<script type="text/javascript">
+
+		$("#fakeLoader").fakeLoader()
+
+	</script>
+
 	<div id="app"></div>
 
     <div class="row">
-        <footer class="footer col-xs-12">
-            <div class="text-center">
-                &copy; 2017 Plantr
-                <a href="#">
+        <footer class="footer">
+            <div class="col-xs-12">
+                <p class="text-center">
+                  &copy; 2017 Plantr
+                  <a href="#">
                     <i class="fa fa-github-alt fa-lg hvr-bounce-in" aria-hidden="true"></i>
-                </a>
+                  </a>
+                </p>
             </div>
         </footer>
     </div>
 
 	<!-- All of our JS code will be transpiled into this bundle.js file -->
 	<script src="bundle.js"></script>
-
-	<script type="text/javascript">
-
-		// $(".footer").hide()
-		$("#fakeLoader").fakeLoader()
-		// $(".footer").show()
-		
-		$('.collapse').collapse()
-
-	</script>
 	
 </body>
 </html>

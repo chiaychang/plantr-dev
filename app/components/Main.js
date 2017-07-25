@@ -1,13 +1,12 @@
 // Include React as a dependency
-var React = require("react");
-// Including the Link component from React Router to navigate within our application without full page reloads
-// https://github.com/ReactTraining/react-router/blob/master/docs/API.md#link
-var Link = require("react-router").Link;
+const React = require("react");
+
+const Link = require("react-router").Link;
 
 // Create the Main component
-var Main = React.createClass({
+class Main extends React.Component {
 
-  render: function() {
+  render() {
 
     return (
         <div className="container-fluid" id="wrap">
@@ -30,7 +29,7 @@ var Main = React.createClass({
                       <Link to="/app/Plants"><i className="fa fa-leaf fa-lg hvr-bounce-in" aria-hidden="true"></i></Link>
                     </div>
                     <div className="nav-icon">
-                      <Link to="/app/AddPlant"><i className="fa fa-plus fa-lg hvr-bounce-in" aria-hidden="true"></i></Link>
+                      <Link to="/app/AddPlant"><i className="fa fa-plus fa-lg hvr-bounce-in" aria-hidden="true" id="addsign"></i></Link>
                     </div>
                     <div className="nav-icon">
                       <a href="/Profile"><i className="fa fa-user fa-lg hvr-bounce-in" aria-hidden="true"></i></a>
@@ -52,7 +51,7 @@ var Main = React.createClass({
         </div> 
     );
   }
-});
+};
 
 // Export the module back to the route
 module.exports = Main;

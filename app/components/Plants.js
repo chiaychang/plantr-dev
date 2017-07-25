@@ -19,7 +19,7 @@ class Plants extends React.Component {
     // When this component mounts, get all user plants
 	componentDidMount() {
     	helpers.getUserPlants().then(function(data) {
-    		console.log(data);
+    		// console.log(data);
 
      		this.setState({ savedPlants: data });
 
@@ -28,16 +28,16 @@ class Plants extends React.Component {
 
   	// This code handles the deleting of a user's plant 
 	handleDelete(plant) {
-		console.log("CLICKED")
-	    console.log(plant);
-	    console.log(plant.id);
+		// console.log("CLICKED")
+	 //    console.log(plant);
+	 //    console.log(plant.id);
 
-	    // Delete the list!
+	    // Delete from the user's plants list
 	    helpers.deleteUserPlant(plant).then(function() {
 
-	      // Get the revised list!
+	      // Get the revised list
 	      	helpers.getUserPlants().then(function(plantData) {
-	      		console.log(plantData);
+	      		// console.log(plantData);
 	      		
 		        this.setState({ savedPlants: plantData });
       		}.bind(this));
@@ -63,20 +63,16 @@ class Plants extends React.Component {
 
 	renderSavedPlants() {
     	return this.state.savedPlants.map(function(plant, index) {
-    		// console.log(plant);
-    		// console.log(index);
-
     		return (
 	        	<div key={index}>
-	        		<div id={plant.id} type="submit">
-		          		<div className="panel panel-default plant-panel">
+	        		{/*<div id={plant.id} type="submit">*/}
+		          		<div className="panel panel-success plant-panel">
+		          			<div className="panel-heading">{plant.name}<i onClick={() => this.handleDelete(plant)} className="fa fa-minus-square fa-lg" aria-hidden="true"></i></div>
 							<div className="panel-body plant-panel-body">
-							 	<h5 className="plantpg-name">{plant.name}</h5>
 								<img src={plant.imageURL} onClick={this.handleClick.bind(null,plant.id)} className="plantpg-img"></img>
-							    <i onClick={() => this.handleDelete(plant)} className="fa fa-minus-square fa-lg" aria-hidden="true"></i>
 							</div>
 						</div>
-					</div>
+					{/*</div>*/}
 	        	</div>
 	      	);
     	}.bind(this));
@@ -89,7 +85,7 @@ class Plants extends React.Component {
 	    	<div className="container-fluid">
 		        <div className="row">
 		          	<div className="col-xs-12 text-center">
-		          		<h2>My Plants</h2>
+		          		<h2>Your Plants</h2>
 		          	</div>
 		        </div>
 		        <div className="col-xs-12">
