@@ -9,13 +9,27 @@ const helpers = require("../utils/helpers");
 
 const customStyles = {
   content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
+    position                   : 'absolute',
+    top                        : '15%',
+    left                       : '20%',
+    right                      : '20%',
+    bottom                     : '50%',
+    border                     : '1px solid #ccc',
+    background                 : '#fff',
+    overflow                   : 'auto',
+    WebkitOverflowScrolling    : 'touch',
+    borderRadius               : '4px',
+    outline                    : 'none',
+    padding                    : '20px'
+  },
+  overlay : {
+    position          : 'fixed',
+    top               : 0,
+    left              : 0,
+    right             : 0,
+    bottom            : 0,
+    backgroundColor   : 'rgba(229, 255, 242, 0.75)'
+  },
 }
 // Create the Main component
 class Reminders extends React.Component {
@@ -46,7 +60,8 @@ class Reminders extends React.Component {
           savedPlants: plantData
           });
         if (plantData.length===0){
-          this.setState({modalIsOpen:true}); }
+          this.setState({modalIsOpen:true})
+        }
         reminderHelpers.getCalendar(reminderData);
       }.bind(this)); 
     }.bind(this));   
@@ -77,12 +92,13 @@ class Reminders extends React.Component {
         onRequestClose={this.closeModal} 
         style={customStyles} 
         contentLabel="Example Modal">
-          <h2 ref={subtitle => this.subtitle = subtitle}>No saved plants</h2>
-          <button className="btn btn-danger" onClick={this.closeModal}>
-            <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
-          </button>
-          <p>You have not saved any plants. Get started using Plantr by adding a plant. Clicking the plus sign in the navigation menu or the green button below.</p>
-          <button type="button" className="btn btn-success" onClick={(e)=>{ e.preventDefault(); this.closeModal(); this.redirect() }}>Add Plant</button>
+          <span type="button" className="glyphicon glyphicon-remove modal-close hvr-bounce-in" aria-hidden="true" onClick={this.closeModal}></span>
+          <h2 className="text-center">Hello There!</h2>
+          <span className="text-center">
+            You do not have any saved plants. Click 
+            <i className="fa fa-plus fa-lg" aria-hidden="true"/>
+            in the navigation menu or the button below to add a plant and get started using Plantr!</span>
+          <button type="button" className="btn btn-success modal-button" onClick={(e)=>{ e.preventDefault(); this.closeModal(); this.redirect() }}>Add a Plant</button>
         </Modal>
         <h3>
           <span>
@@ -250,11 +266,11 @@ class Reminders extends React.Component {
   renderContainer() {
     return (
 
-        <div className="container-fluid">
+        <div className="row">
 	        <div className="row">
 	          	<div className="col-xs-12 text-center">
 	          		<h2>Upcoming Plant Care Reminders</h2>
-                {this.state.todaysDate}
+                <p id="todays-date">{this.state.todaysDate}</p>
 	          	</div>
 	        </div>
 	        <div className="row" id="calendar-wrap">
@@ -299,7 +315,7 @@ class Reminders extends React.Component {
             <div className="col-md-3"></div>
             <div className="col-md-6 text-center">
             <Popup
-                trigger={<a href="./plantr_calendar.ics" download="plantr_calendar.ics"><Button size='huge' icon='add' color='olive' content='Export to iCalendar'/></a>}
+                trigger={<a href="./plantr_calendar.ics" download="plantr_calendar.ics"><Button size='huge' icon='add' color='teal' content='Export to iCalendar'/></a>}
                 content='download ics'
                 on='hover'
                 size='huge'

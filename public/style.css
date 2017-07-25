@@ -2,7 +2,7 @@
 /*GENERAL*/
 
 body {
-  font-family: 'Lato', sans-serif!important; 
+  font-family: 'Lato', sans-serif; 
   background-color: #e8fff2;
   color: #18bc9c;
   display: flex;
@@ -11,14 +11,9 @@ body {
 }
 
 .container-fluid {
-  padding: 0 10px!important;
-  margin-top: 30px!important;
+  padding: 0 10px;
+  margin-top: 30px;
 }
-
-.fa-plus {
-    color: #f08080!important;
-}
-
 
 .jumbotron {
   background-color: transparent;
@@ -39,7 +34,7 @@ body {
 }
 
 .fa-github-alt {
-  display: inline-block!important;
+  display: inline-block;
 }
 
 h1 {
@@ -51,7 +46,7 @@ h1 {
 h2 {
     font-size: 30px;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 15px!important;
 }
 
 a:hover, a:focus {
@@ -63,24 +58,66 @@ a:focus {
 }
 
 span > i {
-  padding-right: 5px!important;
+  padding-right: 5px;
 }
 
 .panel {
-  margin-bottom: 0px!important;
-  box-shadow: none!important;
+  margin-bottom: 0px;
+  box-shadow: none;
   border: none;
-  border-radius: 2px!important;
+  border-radius: 2px;
 }
 
 .fa {
-  padding: 10px!important;
+  padding: 10px;
+}
+
+.modal-button {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 50%;
+}
+
+#new-remndr-btn {
+  width: 30%;
+}
+
+#modal-div {
+  padding-bottom: 10px;
+}
+
+.modal-close {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.modal-button {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 50%;
+}
+
+html [type=button] {
+  -webkit-appearance: none; 
+}
+
+.modal-close {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#content-wrapper, #nav-column {
+  margin-top: 10px;
 }
 
 /*FOOTER CSS*/
 footer {
-  height: 5vh!important;
-  margin-top: 5vh!important;
+  height: 5vh;
+  margin-top: 5vh;
 }
 
 .fa-github-alt {
@@ -102,28 +139,6 @@ footer {
   transform: scale(1.2)!important;
   -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36)!important;
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36)!important;
-}
-
-/*Add Plant Form*/
-.weekdays-selector input {
-  display: none!important;
-}
-
-.weekdays-selector > [type=checkbox] + label {
-  display: inline-block!important;
-  border-radius: 6px!important;
-  background: #dddddd!important;
-  height: auto!important;
-  width: 10%!important;
-  margin-right: 3px!important;
-  line-height: 40px!important;
-  text-align: center!important;
-  cursor: pointer!important;
-}
-
-.weekdays-selector >[type=checkbox]:checked + label {
-  background: #18bc9c!important;
-  color: #ffffff!important;
 }
 
 /*Reminders*/
@@ -156,8 +171,8 @@ footer {
 }
 
 #calendar-wrap {
-  margin: 0 auto!important;
-  min-height: 70vh!important;
+  margin: 0 auto;
+  min-height: 60vh;
 }
 
 .calendar-day {
@@ -166,7 +181,6 @@ footer {
   padding: 10px;
   background-color: #18bc9c!important;
   color: #fff!important;
-  /*border-radius: 2px;*/
 }
 
 .calendar-body {
@@ -183,10 +197,14 @@ footer {
 }
 
 .reminder-type {
-  position: relative!important;
-  display: block!important;
-  margin: 0 auto!important;
-  text-align: center!important;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#todays-date {
+  margin: 0 0 15px 0;
 }
 
 /*Plants Page*/
@@ -200,12 +218,12 @@ footer {
 }
 
 .plant-panel {
-  position: relative!important;
-  float: left!important;
-  margin: 10px!important;
-  width: 30%!important;
-  height: auto!important;
-  overflow: hidden!important;
+  position: relative;
+  float: left;
+  margin: 10px;
+  width: 30%;
+  height: auto;
+  overflow: hidden;
 }
 
 .plant-panel-body {
@@ -226,33 +244,46 @@ footer {
   color: white!important;
 }
 .fa-minus-square {
-  cursor: pointer!important;
-  right: 5px!important;
-  color: #ff3f3f!important;
+  cursor: pointer;
+  right: 5px;
+  top: 5px;
+  color: #fff;
+  font-size: 22px;
 }
 
 .plantpg-img {
-<<<<<<< HEAD
   position: relative;
-  width: 325px;
   height: auto;
-  opacity: 0.8;
-  cursor: pointer;
-=======
-  position: relative!important;
-  height: auto!important;
-  width: 350px!important;
-  opacity: 0.9!important;
-  cursor: pointer!important;
->>>>>>> reviews
+  width: 400px;
+  height: auto;
 }
 
-
 .plantpg-img:hover {
-  cursor: pointer!important;
+  cursor: pointer;
 }
 
 /*FORMS*/
+.weekdays-selector input {
+  display: none!important;
+}
+
+.weekdays-selector > [type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 40px;
+  width: 50px;
+  margin-right: 3px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.weekdays-selector >[type=checkbox]:checked + label {
+  background: #18bc9c;
+  color: #ffffff;
+}
+
 .form-control, input {
   border-width: 0px;
   border: 1px solid rgba(24, 188, 156, 0.41);
@@ -288,9 +319,11 @@ label {
 
 /*PLANT PROFILE*/
 #profile-img {
-  width: 100%!important;
+  width: 100%;
 }
-
+.minus-rmndr {
+  color: #18bc9c;
+}
 .text-muted {
   color: #74958e;
   text-align: center!important;
@@ -325,6 +358,10 @@ label {
     font-size: 20px;
   }
 
+  h2:last-child {
+    font-size: 20px;
+  }
+
   .calendar {
     width: 100%!important;
     margin-right: 0px!important;
@@ -354,8 +391,12 @@ label {
   }
 
  .plant-panel {
-    width: 45% !important;
-}
+    width: 47%;
+  }
+
+  .plantpg-img {
+    width: 400px;
+  }
 
   .jumbotron>hr {
     width: 100%;
@@ -367,3 +408,18 @@ label {
     padding: 5px;
   }
 }
+
+@media screen and (max-width:700px) {
+  .plant-panel {
+    width: 90%;
+    margin: 15px;
+  }
+
+  .plantpg-img {
+    width: 600px;
+  }
+}
+
+
+
+
