@@ -30,7 +30,7 @@ body {
 
 #wrap {
   flex: 1!important;
-  height: 90vh!important;
+  height: 83vh!important;
 }
 
 .fa-github-alt {
@@ -72,6 +72,12 @@ span > i {
   padding: 10px;
 }
 
+#app-plant-btn {
+  display: block;
+  margin: 0 auto;
+  width: 25%;
+}
+
 .modal-button {
   display: block;
   margin: 20px auto 0 auto;
@@ -87,16 +93,10 @@ span > i {
 }
 
 .modal-close {
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-}
-
-.modal-button {
-  display: block;
-  margin: 20px auto 0 auto;
-  width: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 html [type=button] {
@@ -116,8 +116,8 @@ html [type=button] {
 
 /*FOOTER CSS*/
 footer {
-  height: 5vh;
-  margin-top: 5vh;
+  height: 3vh;
+  margin-top: 3vh;
 }
 
 .fa-github-alt {
@@ -142,6 +142,7 @@ footer {
 }
 
 /*Reminders*/
+
 .reminder-img {
   position: relative!important;
   width: 35px!important;
@@ -161,7 +162,7 @@ footer {
 .calendar {
   position: relative!important;
   display: inline-block!important;
-  width: 13.6%!important;
+  width: 13.4%!important;
   margin-right: 2px!important;
   border-right: none!important;
 }
@@ -235,7 +236,6 @@ footer {
 
 .plantpg-name, .fa-minus-square {
   position: absolute!important;
-  z-index: 100!important;
   top: 5px!important;
 }
 
@@ -271,8 +271,7 @@ footer {
   display: inline-block;
   border-radius: 6px;
   background: #dddddd;
-  height: 40px;
-  width: 50px;
+  width: 6%;
   margin-right: 3px;
   line-height: 40px;
   text-align: center;
@@ -417,6 +416,16 @@ label {
 
   .plantpg-img {
     width: 600px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+
+  .ReactModal__Content--after-open {
+    top:5%!important;
+    left:5%!important;
+    right:5%!important;
+    bottom:5%!important;
   }
 }
 
