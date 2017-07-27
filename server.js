@@ -217,7 +217,7 @@ app.post("/calendar", function(req, res) {
             end: "2017-" + date[0] + "-" + date[1] + " 21:00",
             title: event[i].type + " " + event[i].plant,
             description: 'Trees and plants always look like the people they live with, somehow.',
-            url: 'http://plantr.com',
+            url: 'https://plantr-live.herokuapp.com/',
             status: 'confirmed',
             alarms: [
                 { action: 'DISPLAY', trigger: '-PT24H', description: 'Reminder', repeat: true, duration: 'PT15M' },
