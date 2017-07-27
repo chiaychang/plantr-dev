@@ -48,9 +48,9 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 // MongoDB configuration (Change this URL to your own DB)
-// MONGODB_URI: mongodb://heroku_zvxsf3ss:88phc030n4lqsr1eitgg8ca4bi@ds115583.mlab.com:15583/heroku_zvxsf3ss
+// MONGODB_URI: MONGODB_URI: mongodb://heroku_t89rtnkv:6ueev1035ohcarava93trgdf6c@ds133311.mlab.com:33311/heroku_t89rtnkv
 //local: mongodb://localhost:27017/plantsdb
-mongoose.connect("mongodb://heroku_zvxsf3ss:88phc030n4lqsr1eitgg8ca4bi@ds115583.mlab.com:15583/heroku_zvxsf3ss", { useMongoClient: true });
+mongoose.connect("MONGODB_URI: mongodb://heroku_t89rtnkv:6ueev1035ohcarava93trgdf6c@ds133311.mlab.com:33311/heroku_t89rtnkv", { useMongoClient: true });
 var db = mongoose.connection;
 
 db.on("error", function(err) {
